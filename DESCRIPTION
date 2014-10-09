@@ -1,0 +1,12 @@
+Package: CompiledExamples
+Title: Examples using compiled code
+Version: 0.1
+Description: Does stuff.
+Depends: R (>= 2.14.0), Rcpp
+LinkingTo: Rcpp
+ByteCompile: yes
+NeedsCompilation: Yes
+Authors@R: c(person("Drew", "Schmidt", role = c("aut", "cre"), email =
+        "schmidt@math.utk.edu"))
+License: Mozilla Public License 2.0
+Maintainer: Drew Schmidt <wrathematics@gmail.com>

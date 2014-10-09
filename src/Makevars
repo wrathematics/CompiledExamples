@@ -1,0 +1,19 @@
+PKG_CFLAGS = -w
+PKG_FFLAGS = $(SAFE_FFLAGS) -w
+PKG_LIBS = $(RCPP_LDFLAGS) $(FLIBS) -lstdc++
+
+
+CISH_OBJS = c.o cxx.o
+FT_OBJS = f77.o f90.o
+R_OBJS = wrappers_c.o wrappers_cxx.o
+
+OBJECTS = $(CISH_OBJS) $(FT_OBJS) $(R_OBJS)
+
+all: $(SHLIB)
+$(SHLIB): $(OBJECTS)
+
+
+clean:
+	@rm -rf *.o *.mod *.d *.rc *.so *.dylib *.dll *.a *.lib $(SHLIB) $(OBJECTS)
+
+
